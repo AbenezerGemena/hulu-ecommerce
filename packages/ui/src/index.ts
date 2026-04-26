@@ -2,3 +2,4 @@ export * from "./button";
 export * from "./card";
 export * from "./code";
 export * from "./navbar";
+export * from "./product-card";
