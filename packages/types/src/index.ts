@@ -26,3 +26,34 @@ export interface ErrorResponse {
   message: string;
   errors?: Record<string, string[]>;
 }
+
+export interface Product {
+  id: string;
+  title: string;
+  description: string;
+  price: number;
+  originalPrice?: number;
+  rating: number;
+  reviewCount: number;
+  imageUrl: string;
+  imageAlt?: string;
+  badge?: string;
+  createdAt: string | Date;
+}
+
+export interface ProductQueryParams {
+  search?: string;
+  minPrice?: number;
+  maxPrice?: number;
+  sortBy?: "price_asc" | "price_desc" | "rating_desc" | "newest";
+  page?: number;
+  limit?: number;
+}
+
+export interface PaginatedProducts {
+  items: Product[];
+  total: number;
+  page: number;
+  limit: number;
+}
+
